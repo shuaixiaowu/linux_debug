@@ -1,0 +1,14 @@
+<network>
+  <name>work-br0</name>
+  <uuid>fd899a45-f1b8-44bb-93b4-5c8db7d71ce6</uuid>
+  <forward mode='nat'/>
+  <bridge name='work-br0' stp='on' delay='0'/>
+  <mac address='52:54:00:5c:fb:2b'/>
+  <ip address='192.168.130.1' netmask='255.255.255.0'>
+    <dhcp>
+      <range start='192.168.130.100' end='192.168.130.199'/>
+      <host mac='0A:0B:0C:0D:00:01' name='vm1' ip='192.168.130.101'/> //可选项静态IP地址分配
+      <host mac='0A:0B:0C:0D:00:02' name='vm2' ip='192.168.130.102'/>
+    </dhcp>
+  </ip>
+</network>
